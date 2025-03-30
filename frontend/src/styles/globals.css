@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Intel Blue Color Palette */
+  --intel-blue-primary: #0071c5;
+  --intel-blue-dark: #00447c;
+  --intel-blue-light: #00a3e0;
+  --intel-blue-accent: #0060af;
+  --intel-gray-light: #f2f2f2;
+  --intel-gray-medium: #d9d9d9;
+  --intel-gray-dark: #666666;
+  
+  /* Base colors */
+  --background: white;
+  --foreground: #333333;
+  
+  /* Component colors */
+  --card-background: white;
+  --card-foreground: #333333;
+  --card-border: var(--intel-gray-medium);
+  
+  /* Button colors */
+  --button-primary: var(--intel-blue-primary);
+  --button-primary-hover: var(--intel-blue-dark);
+  --button-secondary: var(--intel-gray-light);
+  --button-secondary-hover: var(--intel-gray-medium);
+  
+  /* Input colors */
+  --input-border: var(--intel-gray-medium);
+  --input-focus: var(--intel-blue-primary);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-gray-900;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--intel-blue-primary)] hover:bg-[var(--intel-blue-dark)] text-white font-medium py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-[var(--intel-gray-light)] hover:bg-[var(--intel-gray-medium)] text-gray-900 font-medium py-2 px-4 rounded transition-colors;
+  }
+  
+  .card {
+    @apply bg-white border border-[var(--intel-gray-medium)] rounded-lg shadow-sm p-6;
+  }
+  
+  .input-field {
+    @apply w-full border border-[var(--intel-gray-medium)] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--intel-blue-primary)] focus:border-transparent;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 hover:text-[var(--intel-blue-primary)] transition-colors;
+  }
+  
+  .nav-link-active {
+    @apply text-[var(--intel-blue-primary)] font-medium;
+  }
+}
