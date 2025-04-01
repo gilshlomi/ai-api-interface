@@ -78,7 +78,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
 }
 
 // Frontend App Service
-resource frontendAppService 'Microsoft.Web/sites@2023-07-01' = {
+resource frontendAppService 'Microsoft.Web/sites@2024-04-01' = {
   name: frontendAppName
   location: location
   properties: {
@@ -97,7 +97,7 @@ resource frontendAppService 'Microsoft.Web/sites@2023-07-01' = {
 }
 
 // Backend App Service
-resource backendAppService 'Microsoft.Web/sites@2023-07-01' = {
+resource backendAppService 'Microsoft.Web/sites@2024-04-01' = {
   name: backendAppName
   location: location
   properties: {
