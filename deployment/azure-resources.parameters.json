@@ -5,7 +5,7 @@
     "appName": {
       "value": "ai-api-interface"
     },
-    "environment": {
+    "environmentName": {
       "value": "dev"
     },
     "location": {

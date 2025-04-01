@@ -1,15 +1,15 @@
 param location string = resourceGroup().location
 param appName string
-param environment string = 'dev'
+param environmentName string = 'dev'
 
 // Variables
 var uniqueSuffix = uniqueString(resourceGroup().id)
-var appServicePlanName = '${appName}-plan-${environment}'
-var frontendAppName = '${appName}-frontend-${environment}'
-var backendAppName = '${appName}-backend-${environment}'
-var storageAccountName = replace('${appName}storage${environment}${uniqueSuffix}', '-', '')
-var keyVaultName = '${appName}-kv-${environment}-${uniqueSuffix}'
-var appInsightsName = '${appName}-insights-${environment}'
+var appServicePlanName = '${appName}-plan-${environmentName}'
+var frontendAppName = '${appName}-frontend-${environmentName}'
+var backendAppName = '${appName}-backend-${environmentName}'
+var storageAccountName = replace('${appName}storage${environmentName}${uniqueSuffix}', '-', '')
+var keyVaultName = '${appName}-kv-${environmentName}-${uniqueSuffix}'
+var appInsightsName = '${appName}-insights-${environmentName}'
 
 // Storage Account
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
