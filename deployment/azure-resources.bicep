@@ -7,7 +7,7 @@ var uniqueSuffix = uniqueString(resourceGroup().id)
 var appServicePlanName = '${appName}-plan-${environmentName}'
 var frontendAppName = '${appName}-frontend-${environmentName}'
 var backendAppName = '${appName}-backend-${environmentName}'
-var storageAccountName = replace('${appName}storage${environmentName}${uniqueSuffix}', '-', '')
+var storageAccountName = take(replace(replace(toLower('${appName}st${environmentName}${uniqueSuffix}'), '-', ''), '_', ''), 24)
 var keyVaultName = '${appName}-kv-${environmentName}-${uniqueSuffix}'
 var appInsightsName = '${appName}-insights-${environmentName}'
 
