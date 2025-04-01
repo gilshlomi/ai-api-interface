@@ -85,6 +85,11 @@ cd ../frontend
 npm install
 npm run build
 
+echo -e "${YELLOW}Creating frontend deployment package...${NC}"
+cd build
+zip -r ../build.zip ./*
+cd ..
+
 echo -e "${YELLOW}Deploying frontend to Azure...${NC}"
 FRONTEND_APP_NAME="${APP_NAME}-frontend-${ENVIRONMENT}"
 az webapp deployment source config-zip -g "$RESOURCE_GROUP" -n "$FRONTEND_APP_NAME" --src "./build.zip"
@@ -95,9 +100,13 @@ cd ../backend
 npm install
 npm run build
 
+echo -e "${YELLOW}Creating backend deployment package...${NC}"
+cd dist
+zip -r ../dist.zip ./*
+cd ..
+
 echo -e "${YELLOW}Deploying backend to Azure...${NC}"
 BACKEND_APP_NAME="${APP_NAME}-backend-${ENVIRONMENT}"
-zip -r ./dist.zip ./dist
 az webapp deployment source config-zip -g "$RESOURCE_GROUP" -n "$BACKEND_APP_NAME" --src "./dist.zip"
 
 echo -e "${GREEN}"
