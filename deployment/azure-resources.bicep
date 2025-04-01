@@ -12,7 +12,7 @@ var keyVaultName = take(replace(replace(toLower('${appName}kv${environmentName}$
 var appInsightsName = '${appName}-insights-${environmentName}'
 
 // Storage Account
-resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2023-07-01' = {
   name: storageAccountName
   location: location
   sku: {
@@ -39,7 +39,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
 }
 
 // Key Vault
-resource keyVault 'Microsoft.KeyVault/vaults@2021-11-01-preview' = {
+resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
   name: keyVaultName
   location: location
   properties: {
@@ -67,7 +67,7 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
 }
 
 // App Service Plan
-resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
+resource appServicePlan 'Microsoft.Web/serverfarms@2023-07-01' = {
   name: appServicePlanName
   location: location
   sku: {
@@ -78,7 +78,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-03-01' = {
 }
 
 // Frontend App Service
-resource frontendAppService 'Microsoft.Web/sites@2021-03-01' = {
+resource frontendAppService 'Microsoft.Web/sites@2023-07-01' = {
   name: frontendAppName
   location: location
   properties: {
@@ -97,7 +97,7 @@ resource frontendAppService 'Microsoft.Web/sites@2021-03-01' = {
 }
 
 // Backend App Service
-resource backendAppService 'Microsoft.Web/sites@2021-03-01' = {
+resource backendAppService 'Microsoft.Web/sites@2023-07-01' = {
   name: backendAppName
   location: location
   properties: {
