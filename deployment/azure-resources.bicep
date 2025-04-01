@@ -8,7 +8,7 @@ var appServicePlanName = '${appName}-plan-${environmentName}'
 var frontendAppName = '${appName}-frontend-${environmentName}'
 var backendAppName = '${appName}-backend-${environmentName}'
 var storageAccountName = take(replace(replace(toLower('${appName}st${environmentName}${uniqueSuffix}'), '-', ''), '_', ''), 24)
-var keyVaultName = '${appName}-kv-${environmentName}-${uniqueSuffix}'
+var keyVaultName = take(replace(replace(toLower('${appName}kv${environmentName}${uniqueSuffix}'), '-', ''), '_', ''), 24)
 var appInsightsName = '${appName}-insights-${environmentName}'
 
 // Storage Account
