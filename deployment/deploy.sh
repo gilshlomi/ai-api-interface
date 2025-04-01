@@ -115,7 +115,7 @@ npm install || {
 
 # Build frontend
 log "INFO" "Building frontend..."
-npm run build || {
+NODE_ENV=production npm run build || {
     log "ERROR" "Frontend build failed"
     exit 1
 }
