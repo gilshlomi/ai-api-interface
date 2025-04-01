@@ -25,7 +25,6 @@ module.exports = {
       },
     },
     safelist: [
-      'bg-white',
       'text-white',
       'text-gray-900',
       'border-gray-200',

@@ -80,19 +80,19 @@ const ApiInteractionManager: React.FC<ApiInteractionManagerProps> = ({ connectio
         </h1>
         <div className="flex space-x-2">
           <button 
-            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'request' ? 'bg-white border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'request' ? 'bg-slate-50 border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             onClick={() => setActiveTab('request')}
           >
             Request
           </button>
           <button 
-            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'metrics' ? 'bg-white border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'metrics' ? 'bg-slate-50 border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             onClick={() => setActiveTab('metrics')}
           >
             Metrics
           </button>
           <button 
-            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'logs' ? 'bg-white border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`px-4 py-2 rounded-t-lg transition-colors ${activeTab === 'logs' ? 'bg-slate-50 border-t border-l border-r border-gray-200 font-medium text-[var(--intel-blue-primary)]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
             onClick={() => setActiveTab('logs')}
           >
             Logs
@@ -100,7 +100,7 @@ const ApiInteractionManager: React.FC<ApiInteractionManagerProps> = ({ connectio
         </div>
       </div>
       
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
+      <div className="bg-slate-50 border border-gray-200 rounded-lg p-6">
         {activeTab === 'request' && (
           <ApiRequestPanel 
             connectionId={connection.id} 

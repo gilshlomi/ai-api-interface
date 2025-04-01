@@ -100,7 +100,7 @@ const ApiLogsViewer: React.FC<ApiLogsViewerProps> = ({
         </div>
       </div>
       
-      <div className="bg-white border border-gray-200 rounded-md">
+      <div className="bg-slate-50 border border-gray-200 rounded-md">
         <div className="grid grid-cols-12 gap-2 w-full text-sm font-medium bg-gray-100 p-3 border-b border-gray-200">
           <div className="col-span-2">Timestamp</div>
           <div className="col-span-3">Endpoint</div>
