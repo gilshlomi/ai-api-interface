@@ -61,7 +61,7 @@ DEPLOYMENT_OUTPUT=$(az deployment group create \
     --resource-group "$RESOURCE_GROUP" \
     --template-file "azure-resources.bicep" \
     --parameters "azure-resources.parameters.json" \
-    --parameters appName="$APP_NAME" environment="$ENVIRONMENT" \
+    --parameters environmentName="$ENVIRONMENT" appName="$APP_NAME" \
     --output json)
 
 # Extract outputs from deployment
