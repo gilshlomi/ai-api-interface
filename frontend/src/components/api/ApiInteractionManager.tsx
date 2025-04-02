@@ -3,6 +3,41 @@ import { useAuth } from '../auth/AuthContext';
 import ApiRequestPanel from '../../components/api/ApiRequestPanel';
 import ApiUsageMetrics from '../../components/api/ApiUsageMetrics';
 import ApiLogsViewer from '../../components/api/ApiLogsViewer';
+import styles from './ApiInteractionManager.module.css';
+
+// ... other imports
+
+export const ApiInteractionManager = () => {
+  const [activeTab, setActiveTab] = useState('request');
+
+  return (
+    <div>
+      <div className="flex gap-2">
+        <button
+          onClick={() => setActiveTab('request')}
+          className={`${styles.tab} ${activeTab === 'request' ? styles.tabActive : styles.tabInactive}`}
+        >
+          Request
+        </button>
+        <button
+          onClick={() => setActiveTab('metrics')}
+          className={`${styles.tab} ${activeTab === 'metrics' ? styles.tabActive : styles.tabInactive}`}
+        >
+          Metrics
+        </button>
+        <button
+          onClick={() => setActiveTab('logs')}
+          className={`${styles.tab} ${activeTab === 'logs' ? styles.tabActive : styles.tabInactive}`}
+        >
+          Logs
+        </button>
+      </div>
+      <div className={styles.contentContainer}>
+        {/* ... rest of your component */}
+      </div>
+    </div>
+  );
+};
 
 interface ApiInteractionManagerProps {
   connectionId: string;

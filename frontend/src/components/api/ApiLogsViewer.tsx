@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import ApiLogEntry from './ApiLogEntry';
+import styles from './ApiLogsViewer.module.css';
 
+export const ApiLogsViewer = () => {
+  return (
+    <div className={styles.container}>
+      {/* Your log entries */}
+      <div className={styles.logEntry}>
+        <div className={styles.timestamp}>2024-04-01 15:01:06</div>
+        <div className={styles.message}>Log message here</div>
+      </div>
+    </div>
+  );
+};
 interface ApiLogsViewerProps {
   connectionId?: string;
   connectionName?: string;

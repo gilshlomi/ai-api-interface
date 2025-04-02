@@ -1,0 +1,16 @@
+.tabContainer {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: background-color 0.2s;
+  }
+  
+  .content {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
