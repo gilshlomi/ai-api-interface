@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../auth/AuthContext';
 import ApiRequestPanel from '../../components/api/ApiRequestPanel';
 import ApiUsageMetrics from '../../components/api/ApiUsageMetrics';
