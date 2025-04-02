@@ -115,7 +115,7 @@ resource backendAppService 'Microsoft.Web/sites@2024-04-01' = {
         }
         {
           name: 'STORAGE_ACCOUNT_CONNECTION_STRING'
-          value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${listKeys(storageAccount.id, '2023-07-01').keys[0].value}'        }
+          value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${listKeys(storageAccount.id, '2024-01-01').keys[0].value}'        }
         {
           name: 'KEY_VAULT_URI'
           value: keyVault.properties.vaultUri
